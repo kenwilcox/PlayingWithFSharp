@@ -1,5 +1,4 @@
-﻿// Learn more about F# at http://fsharp.net
-// See the 'F# Tutorial' project for more help.
+﻿#nowarn "25"
 
 // create some types
 type Address = {Street: string; City: string;}
@@ -13,7 +12,7 @@ let main argv =
     let first, second, _ = (1, 2, 3)
     printfn "first = %A, second = %A" first second
 
-    let e1::e2::rest = [1..10]
+    let e1::e2::rest = [1..10] // nowarn "25", don't care right now
     printfn "the rest is %A" rest
 
     let listMatcher aList = 
