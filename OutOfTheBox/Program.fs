@@ -8,6 +8,16 @@ type Person = {Name: string; Address: Address}
 
 type PersonalName = {FirstName: string; LastName: string}
 
+type Suit = Club | Diamond | Spade | Heart
+type Rank = Two | Three | Four | Five | Six | Seven | Eight
+            | Nine | Ten | Jack | Queen | King | Ace
+
+let compareCard card1 card2 = 
+  if card1 < card2
+  then printfn "%A is greater than %A" card2 card1
+  else printfn "%A is greater than %A" card1 card2
+
+
 [<EntryPoint>]
 let main argv = 
     printfn "%A" argv
@@ -30,5 +40,13 @@ let main argv =
     
     printfn "alice1 = alice2 is %A" (alice1=alice2)
     printfn "alice1 = bob1 is %A" (alice1=bob1)
+
+    // most types are automatically comparable
+    let aceHearts = Heart, Ace
+    let twoHearts = Heart, Two
+    let aceSpades = Spade, Ace
+
+    compareCard aceHearts twoHearts
+    compareCard twoHearts aceSpades
 
     0 // return an integer exit code
