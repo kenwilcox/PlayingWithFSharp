@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PatternMatching", "Source\PatternMatching\PatternMatching.fsproj", "{5003C306-D362-46BE-9675-8CA20534D6C3}"
 EndProject
@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "OutOfTheBox", "OutOfTheBox\OutOfTheBox.fsproj", "{F456A258-E8A0-41C6-B7AD-A196B3698F55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{5003C306-D362-46BE-9675-8CA20534D6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5003C306-D362-46BE-9675-8CA20534D6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5003C306-D362-46BE-9675-8CA20534D6C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F456A258-E8A0-41C6-B7AD-A196B3698F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F456A258-E8A0-41C6-B7AD-A196B3698F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F456A258-E8A0-41C6-B7AD-A196B3698F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F456A258-E8A0-41C6-B7AD-A196B3698F55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
