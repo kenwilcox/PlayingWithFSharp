@@ -49,4 +49,12 @@ let main argv =
     compareCard aceHearts twoHearts
     compareCard twoHearts aceSpades
 
+    let hand = [Club, Ace; Heart, Three; Heart, Ace; Spade, Jack; Diamond, Two; Diamond, Ace]
+    // instant sorting!
+    List.sort hand |> printfn "sorted hand is (low to high) %A"
+
+    // You get min and max for free too!
+    List.max hand |> printfn "high card is %A"
+    List.min hand |> printfn "low card is %A"
+
     0 // return an integer exit code
