@@ -2,7 +2,7 @@
 // See the 'F# Tutorial' project for more help.
 
 [<EntryPoint>]
-let main argv = 
+let main argv =
     printfn "%A" argv
 
     let add1 input = input + 1
@@ -21,5 +21,16 @@ let main argv =
     times2WithLogging 3 |> ignore
 
     [1..5] |> List.map add1WithLogging |> ignore
+
+    let genericTimer anyFunc input =
+      let stopwatch = System.Diagnostics.Stopwatch()
+      stopwatch.Start()
+      let result = anyFunc input
+      printfn "elapsed ms is %A" stopwatch.ElapsedMilliseconds
+      result
+
+    let add1WithTimer = genericTimer add1WithLogging
+
+    add1WithTimer 3 |> ignore
 
     0 // return an integer exit code
