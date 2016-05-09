@@ -1,6 +1,10 @@
 ﻿// Learn more about F# at http://fsharp.org
 // See the 'F# Tutorial' project for more help.
 
+type Animal(noiseMakingStrategy) =
+  member this.MakeNoise =
+    noiseMakingStrategy() |> printfn "Making noise %s"
+
 [<EntryPoint>]
 let main argv =
     printfn "%A" argv
@@ -32,5 +36,17 @@ let main argv =
     let add1WithTimer = genericTimer add1WithLogging
 
     add1WithTimer 3 |> ignore
+
+    // crete a cat
+    let meowing() = "Meow"
+    let cat = Animal(meowing)
+    cat.MakeNoise
+
+    // and a dog
+    let woofOrBark() = if (System.DateTime.Now.Second % 2 = 0)
+                        then "Woof" else "Bark"
+    let dog = Animal(woofOrBark)
+    dog.MakeNoise
+    dog.MakeNoise
 
     0 // return an integer exit code
