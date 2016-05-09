@@ -6,7 +6,7 @@ type Customer = {ID: int; Name: string; Address: Address}
 
 
 [<EntryPoint>]
-let main argv = 
+let main argv =
     printfn "%A" argv
 
     let first, second, _ = (1, 2, 3)
@@ -15,8 +15,8 @@ let main argv =
     let e1::e2::rest = [1..10] // nowarn "25", don't care right now
     printfn "the rest is %A" rest
 
-    let listMatcher aList = 
-      match aList with 
+    let listMatcher aList =
+      match aList with
       | [] -> printfn "the list is empty"
       | [first] -> printfn "the list has one element %A " first
       | [first; second] -> printfn "list is %A and %A" first second
