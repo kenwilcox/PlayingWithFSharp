@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PatternMatching", "Source\PatternMatching\PatternMatching.fsproj", "{5003C306-D362-46BE-9675-8CA20534D6C3}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "OutOfTheBox", "OutOfTheBox\OutOfTheBox.fsproj", "{F456A258-E8A0-41C6-B7AD-A196B3698F55}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Wrappers", "Wrappers\Wrappers.fsproj", "{061BF6CB-D0C6-4158-9DDE-D327D798C0AA}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PartialApplication", "PartialApplication\PartialApplication.fsproj", "{098CA42C-BFE4-4572-83EC-59F376E206B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{061BF6CB-D0C6-4158-9DDE-D327D798C0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{061BF6CB-D0C6-4158-9DDE-D327D798C0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{061BF6CB-D0C6-4158-9DDE-D327D798C0AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{098CA42C-BFE4-4572-83EC-59F376E206B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{098CA42C-BFE4-4572-83EC-59F376E206B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{098CA42C-BFE4-4572-83EC-59F376E206B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{098CA42C-BFE4-4572-83EC-59F376E206B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
