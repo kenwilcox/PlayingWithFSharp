@@ -48,4 +48,17 @@ let main argv =
         add1
         2 |> ignore
 
+    let add1WithConsoleLogging =
+      genericLogger
+        (fun x -> printf "input=%i. " x)
+        (fun x -> printf " result=%i\n" x)
+        add1
+
+    printfn "\n"
+    printfn "2: %A\n" (add1WithConsoleLogging 2)
+    printfn "3: %A\n" (add1WithConsoleLogging 3)
+    printfn "4: %A\n" (add1WithConsoleLogging 4)
+
+    [1..5] |> List.map add1WithConsoleLogging |> ignore
+
     0 // return an integer exit code
