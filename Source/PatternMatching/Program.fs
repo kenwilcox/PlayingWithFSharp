@@ -44,11 +44,11 @@ let main argv =
 
     let handleState state =
       match state with
-      | Inactive -> ()
-      | Draft -> ()
-      | New -> ()
-      | Discontinued -> ()
-      | Published -> ()
+      | Inactive -> (printfn "state is now Inactive")
+      | Draft -> (printfn "state is now Draft")
+      | New -> (printfn "state is now New")
+      | Discontinued -> (printfn "state is now Discontinued")
+      | Published -> (printfn "state is now Published")
 
     handleState Published
 
