@@ -1,9 +1,7 @@
-﻿#nowarn "25"
-
-// create some types
+﻿// create some types
 type Address = {Street: string; City: string;}
 type Customer = {ID: int; Name: string; Address: Address}
-
+type State = New | Draft | Published | Inactive | Discontinued
 
 [<EntryPoint>]
 let main argv =
@@ -12,8 +10,13 @@ let main argv =
     let first, second, _ = (1, 2, 3)
     printfn "first = %A, second = %A" first second
 
-    let e1::e2::rest = [1..10] // nowarn "25", don't care right now
-    printfn "the rest is %A" rest
+    //let e1::e2::rest -> = [1..10] // nowarn "25", don't care right now
+    let listRest aList =
+      match aList with
+      | e1::e2::rest -> (rest)
+      | _ -> (aList)
+
+    printfn "the rest is %A" (listRest [1..10])
 
     let listMatcher aList =
       match aList with
@@ -38,5 +41,15 @@ let main argv =
 
     let {Name=name3; Address={Street=street3}} = customer1
     printfn "The customer is called %s and lives at %s" name3 street3
+
+    let handleState state =
+      match state with
+      | Inactive -> ()
+      | Draft -> ()
+      | New -> ()
+      | Discontinued -> ()
+      | Published -> ()
+
+    handleState Published
 
     0 // return an integer exit code
