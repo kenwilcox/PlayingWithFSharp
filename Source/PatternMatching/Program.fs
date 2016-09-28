@@ -71,4 +71,19 @@ let main argv =
     doSomethingWithFileInfo badFileInfo
 
 
+    let rec movingAverages list =
+      match list with
+      // if input is empty, return an empty list
+      | [] -> []
+      // otherwise process
+      | x::y::rest ->
+        let avg = (x + y)/2.0
+        avg :: movingAverages(y::rest)
+      // for one item
+      | [_] -> []
+
+    printfn "%A" (movingAverages [1.0])
+    printfn "%A" (movingAverages [1.0;2.0])
+    printfn "%A" (movingAverages [1.0;2.0;3.0;4.0;5.0])
+
     0 // return an integer exit code
