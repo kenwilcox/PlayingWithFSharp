@@ -52,4 +52,23 @@ let main argv =
 
     handleState Published
 
+    let getFileInfo filePath =
+      let fi = new System.IO.FileInfo(filePath)
+      if fi.Exists then Some(fi) else None
+
+    let goodFileName = "C:\\pagefile.sys"
+    let badFileName = "C:\\IDontExist.foo.bar"
+
+    let goodFileInfo = getFileInfo goodFileName
+    let badFileInfo = getFileInfo badFileName
+
+    let doSomethingWithFileInfo checkFileInfo =
+      match checkFileInfo with
+      | Some (fileInfo:System.IO.FileInfo) -> (printfn "the file %s exists" fileInfo.FullName)
+      | None -> (printfn "the file doesn't exist")
+
+    doSomethingWithFileInfo goodFileInfo
+    doSomethingWithFileInfo badFileInfo
+
+
     0 // return an integer exit code
